@@ -1,5 +1,5 @@
 section .bss
-    buffer resb 20
+    buffer resb 20я
 
 section .text
     global _start

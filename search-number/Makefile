@@ -1,10 +1,10 @@
-
 SRC_DIR   := src
 LIB_DIR   := ../lib
 BUILD_DIR := build
 
 ASM       := nasm
-ASMFLAGS  := -f elf64
+#ASMFLAGS  := -f elf64
+ASMFLAGS  := -f elf64 -g -F dwarf
 LD        := ld
 
 TARGET    := $(BUILD_DIR)/exec
@@ -30,3 +30,5 @@ run: $(TARGET)
 
 clean:
 	rm -rf $(BUILD_DIR)
+
+.PHONY: all run clean
